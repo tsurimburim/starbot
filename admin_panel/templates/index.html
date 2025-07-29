@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LuxStarBot Admin</title>
+    <script async src="https://telegram.org/js/telegram-widget.js?22"
+        data-telegram-login="luxstarstarifybot"
+        data-size="large"
+        data-userpic="true"
+        data-request-access="write"
+        data-userpic="true">
+    </script>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { padding: 8px; border: 1px solid #ccc; text-align: left; }
+        th { background-color: #f2f2f2; }
+        h2 { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h2>LuxStarBot — Панель администратора</h2>
+    <div id="telegram-login"></div>
+    <table>
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Stars</th>
+                <th>Spent (TON)</th>
+                <th>Lang</th>
+                <th>Ref</th>
+                <th>Orders</th>
+                <th>Gifts</th>
+                <th>Reg Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for uid, info in users.items() %}
+            <tr>
+                <td>{{ uid }}</td>
+                <td>{{ info.stars }}</td>
+                <td>{{ info.spent }}</td>
+                <td>{{ info.lang }}</td>
+                <td>{{ info.ref or '-' }}</td>
+                <td>{{ info.orders|length }}</td>
+                <td>{{ info.gifts|length }}</td>
+                <td>{{ info.get("reg", "-") }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

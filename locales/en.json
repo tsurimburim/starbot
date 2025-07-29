@@ -1,0 +1,19 @@
+{
+  "start": "Welcome to LuxStarBot 🇬🇧",
+  "buy": "⭐ Buy",
+  "gift": "🎁 Gift",
+  "ref": "👥 Referrals",
+  "orders": "📜 Orders",
+  "profile": "👤 Profile",
+  "lang": "🌐 Language",
+  "select_package": "Select a star package:",
+  "confirm": "Confirm your payment",
+  "after_payment": "Press the button below to pay via CryptoBot",
+  "ref_link": "Your referral link",
+  "gift_coming": "Gift system coming soon",
+  "no_orders": "You have no purchases yet",
+  "reg_date": "Registration date",
+  "gift_prompt": "Reply to a user's message with the number of ⭐ to gift",
+  "orders_history": "🧾 Order History",
+  "gift_history": "🎁 Gift History"
+}
